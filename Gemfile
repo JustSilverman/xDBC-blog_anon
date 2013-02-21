@@ -1,4 +1,5 @@
 source :rubygems
+gem 'faker'
 
 # PostgreSQL driver
 gem 'pg'
@@ -16,6 +17,5 @@ gem 'activerecord'
 gem 'rake'
 
 group :test do
-  gem 'faker'
   gem 'rspec'
 end
