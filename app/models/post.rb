@@ -10,8 +10,10 @@ class Post < ActiveRecord::Base
   end
 
   def handle_tags(input_tags)
-    input_tags.split(",").map(&:strip).each do |tag|
-      self.tags << Tag.find_or_create_by_name(tag)
+    tags = input_tags.split(",").map do |tag|
+      Tag.find_or_create_by_name(tag.strip.downcase).id
     end
+
+    self.tag_ids = tags
   end
 end

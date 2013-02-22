@@ -1,6 +1,1 @@
-<h2>When Should it be Where?</h2>
-<h3>Latest Posts</h3>
-<%= "Nothing posted yet. Create one below!" if @posts.empty? %>
-<% @posts.each do |post| %>
-  <p class="post"><a href="<%= "/posts/#{post.id}" %>"><%= post.title %></a> - (<%= "#{post.tags_string}" %>)</p>
-<% end %>
+<%= erb :'posts/_posts', :locals => { :posts => @posts } %>

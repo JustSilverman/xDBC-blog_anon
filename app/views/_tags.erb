@@ -1,0 +1,7 @@
+<span class="tags">
+  <% if post.tags.any? %>
+    (<% post.tags.each do |tag| %>
+    <a class="tag-string" href="<%= "/tags/#{tag.id}/posts" %>"><%= "#{tag.name} " %></a>
+    <% end %>)
+  <% end %>
+</span>

@@ -6,7 +6,8 @@
   </section>
 </div>
 
-<div class="footer">
+<div>
   <button class="edit-button" id="<%= "post_#{@post.id}" %>" type="button">Edit</button>
-  <span class="tags"> Tags: <%= @post.tags_string %></span>
+  <%= erb :'posts/_delete_button', :locals => { :post => @post } %>
+  <span> Tags: <%= erb :_tags, :locals => {:post => @post} %></span>
 </div>
