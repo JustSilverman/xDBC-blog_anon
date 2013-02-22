@@ -61,7 +61,7 @@ div.input-field input {
   color: #838383;
   width: 300px;
   padding: 8px;
-  font-size: 20px;
+  font-size: 16px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -khtml-border-radius: 2px;
@@ -71,7 +71,7 @@ div.input-field input {
 
 .input-textarea {
   color: #838383;
-  font-size: 20px;
+  font-size: 16px;
   padding: 8px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
