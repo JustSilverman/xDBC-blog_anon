@@ -53,5 +53,5 @@ end
 delete '/posts' do
   @post = Post.find_by_id(params[:id])
   @post.destroy if @post
-  redirect to '/'
+  redirect to '/' unless params[:ajax]
 end

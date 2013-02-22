@@ -10,7 +10,7 @@ $(document).ready(function(){
   $('a.delete-post').click(function(e){
     e.preventDefault();
     var postId = $(this).attr('id').split("_")[1];
-    $.post("/posts", { id: postId, _method: "Delete" } );
+    $.post("/posts", { id: postId, _method: "Delete" , ajax: true} );
     $("#div_post_" + postId).fadeOut(200);
     return false;
   });
