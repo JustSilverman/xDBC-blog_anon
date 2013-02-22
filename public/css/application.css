@@ -28,6 +28,7 @@ body {
 
 .container {
   width: 960px;
+  min-height: 450px;
   margin: 5em auto 2em auto;
 }
 
@@ -122,7 +123,8 @@ section.body {
 }
 
 .footer {
-  margin: 2em 0;
+  width: 960px;
+  margin: 2em auto;
   padding-top: 0.5em;
   border-top: 1px solid #aaa;
 }
