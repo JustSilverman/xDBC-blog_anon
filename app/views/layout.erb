@@ -7,10 +7,17 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+  <script src="/javascripts/application.js"></script>
 
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <%= erb :header %>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>

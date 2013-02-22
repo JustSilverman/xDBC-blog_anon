@@ -10,6 +10,9 @@ configure do
 
   # Set the views to 
   set :views, File.join(Sinatra::Application.root, "app", "views")
+
+  # enable PUT and DELETE requests
+  set :method_override, true
 end
 
 run Sinatra::Application

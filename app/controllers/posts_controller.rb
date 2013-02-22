@@ -20,8 +20,12 @@ get '/posts/:id/edit' do
   erb :'posts/edit'
 end
 
-post '/posts/' do
-  @post = Post.new(params)
+post '/posts' do
+  @post = Post.new(:title => params[:title],
+                   :body  => params[:body])
+
+  puts @post.inspect
+
   if @post.save
     erb :'posts/show'
   else
@@ -30,7 +34,7 @@ post '/posts/' do
   end
 end
 
-put '/posts/' do
+put '/posts' do
   @post = Post.find_by_id(params[:id])
   redirect to '/' unless @post
 
@@ -42,8 +46,10 @@ put '/posts/' do
   end
 end
 
-delete '/posts/' do
+delete '/posts' do
+  puts params
   @post = Post.find_by_id(params[:id])
+  puts @post.inspect
   @post.destroy if @post
-  erb :'posts/'
+  redirect to '/'
 end

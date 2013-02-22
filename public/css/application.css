@@ -1,0 +1,122 @@
+body {
+  font-family: Helvetica;
+  background-image: url('../images/ricepaper2.png');
+  padding: 1px;
+}
+
+.top-nav {
+  background-color: #222;
+  height: 4em;
+  color: #FFF;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 5px 5px 10px #888888;
+}
+ 
+.top-nav h1 {
+  display: inline;
+  float: left;
+  font-size: 2em;
+  line-height: 0.75em;
+  margin-left: 1em;
+}
+
+.container {
+  width: 960px;
+  margin: 5em auto 2em auto;
+}
+
+.content {
+  width: 600px;
+}
+
+.page-title {
+  margin-bottom: 1em;
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid #ddd; 
+}
+
+.post-list {
+}
+
+.field {
+  margin: 5px 0 0 0;
+}
+
+div.input-field {
+}
+
+div.input-field input {
+  color: #838383;
+  width: 300px;
+  padding: 8px;
+  font-size: 20px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+.input-textarea {
+  color: #838383;
+  font-size: 20px;
+  padding: 8px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+.edit-button {
+  width: 100px;
+  background-color: #aaa;
+  height: 25px;
+  border: none;
+  margin: 1em 1em 1em 0;
+}
+
+input.button {
+  width: 100px;
+  background-color: #aaa;
+  height: 35px;
+  border: none;
+  margin-bottom: 1em;
+}
+
+input.danger-button {
+  width: 100px;
+  background-color: #d55;
+  height: 35px;
+  border: none;
+}
+
+.errors {
+  color: #f00;
+}
+
+span.tags {
+  display: inline-block;
+  padding-top: 1em;
+  color: #aaa;
+  line-height: 25px;
+}
+
+section.body {
+  min-height: 20em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #aaa;
+}
+
+.break {
+  margin: 2em: 0;
+  border-bottom: 1px solid #aaa; 
+}
+
+.footer {
+  margin: 2em: 0;
+  padding-top: 0.5em;
+  border-top: 1px solid #aaa;  
+}

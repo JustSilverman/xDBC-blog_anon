@@ -1,35 +1,26 @@
-<style type="text/css">
-  .container {
-    margin: 20px auto;
-    width: 600px;
-    padding: 0px 20px 20px 20px;
-    border: 1px dotted black;
-  }
-  th {
-    text-align: left;
-  }
-</style>
+<div class="post-list">
+  <h2>Latest Posts</h2>
+  <%= "Nothing posted yet. Create one below!" if @posts.empty? %>
+  <% @posts.each do |post| %>
+    <p class="post"><a href="<%= "/posts/#{post.id}" %>"><%= post.title.capitalize %></a> - (<%= "#{post.tags_string}" %>)</p>
+  <% end %>
+</div>
 
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+<div class="break"></div>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<div class="post-form">
+  <h2>Create a new post</h2>
+  <form action="/posts" method="post">
+    <div class="field input-field"><input type="text" name="title" placeholder="title"></div></br>
+    <div class="textarea">
+      <textarea class="input-textarea" rows="20" cols="50" name="body" placeholder="some thoughts..."></textarea>
+    </div></br>
+    <div class="field input-field"><input type="text" name="tags" placeholder="tags (comma separated)"></div>
+    </br>
+    <input class="button" type="submit" value="Post">
+  </form>
+</div>
+
+<div class="footer">
+  <span class="rights">all rights reserved</span>
 </div>

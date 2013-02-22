@@ -1,0 +1,12 @@
+<div class="content">
+  <h2><%= @post.title.capitalize %></h2>
+
+  <section class="body">
+    <p><%= @post.body %></p>
+  </section>
+</div>
+
+<div class="footer">
+  <button class="edit-button" id="<%= "post_#{@post.id}" %>" type="button">Edit</button>
+  <span class="tags"> Tags: <%= @post.tags_string %></span>
+</div>
