@@ -42,9 +42,6 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
-.post-list {
-}
-
 .field {
   margin: 5px 0 0 0;
 }
@@ -93,6 +90,12 @@ div.input-field input {
   margin-bottom: 1em;
 }
 
+.delete-post {
+  text-decoration: none;
+  font-size: 75%;
+  color: #d55;
+}
+
 input.danger-button {
   width: 100px;
   background-color: #d55;
@@ -115,11 +118,6 @@ span.tags {
 section.body {
   min-height: 20em;
   padding-bottom: 2em;
-}
-
-.break {
-  margin: 2em: 0;
-  border-bottom: 1px solid #aaa;
 }
 
 .footer {
