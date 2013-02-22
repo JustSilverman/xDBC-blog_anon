@@ -12,6 +12,7 @@ $(document).ready(function(){
     var postId = $(this).attr('id').split("_")[1];
     $.post("/posts", { id: postId, _method: "Delete" } );
     $("#div_post_" + postId).fadeOut(200);
+    return false;
   });
 
 });

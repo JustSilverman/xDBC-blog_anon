@@ -1,13 +1,14 @@
 <h1 class="page-title">Edit Post</h1>
 
 <%= erb :_errors, :locals => { :object => @post } %>
+
 <div class="post-form">
   <form action="/posts" method="post">
     <input type="hidden" name="id" value="<%= @post.id %>">
     <input type="hidden" name="_method" value="PUT">
     <div class="field input-field"><input type="text" name="title" value="<%= @post.title %>"></div></br>
     <div class="textarea">
-      <textarea class="input-textarea" rows="20" cols="50" name="body"><%= @post.body %></textarea>
+      <textarea class="input-textarea" rows="15" cols="50" name="body"><%= @post.body %></textarea>
     </div></br>
     <div class="field input-field"><input type="text" name="tags" value="<%= @post.tags_string %>"></div>
     </br>
